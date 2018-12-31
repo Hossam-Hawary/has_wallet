@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.version     = HasWallet::VERSION
   spec.authors     = ["Hossam Eldeen Hawary"]
   spec.email       = ["hossameldeen.hawary@gmail.com"]
-  spec.homepage    = "TODO"
-  spec.summary     = "TODO: Summary of HasWallet."
-  spec.description = "TODO: Description of HasWallet."
+  spec.homepage    = "https://github.com/Hossam-Hawary/has_wallet"
+  spec.summary     = "Adding Wallet system for models"
+  spec.description = "Say, you have a user model and you need now to make him have a wallet"
   spec.license     = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
