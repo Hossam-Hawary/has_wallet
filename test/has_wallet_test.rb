@@ -5,17 +5,14 @@ module HasWallet
       assert_kind_of Module, HasWallet
     end
 
-    test 'class_instance_included' do
-      user = User.new
-      admin = Admin.new
-
-      assert_raise(NoMethodError) { admin.wallet_amount }
-      assert_equal user.wallet_amount, 1000
+    test 'instance methods included for models that has_wallet' do
+      assert_raise(NoMethodError) { Admin.new.wallet_amount }
+      assert_equal 1000, User.new.wallet_amount
     end
 
-    test 'class_methods_included' do
+    test 'class methods included for models that has_wallet' do
       assert_raise(NoMethodError) { Admin.my_name }
-      assert_equal User.my_name, User.to_s
+      assert_equal User.to_s, User.my_name
     end
   end
 end
